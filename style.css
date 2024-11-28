@@ -1,0 +1,56 @@
+
+/* 1. Ge alla element på sidan en 'box-sizing: border-box;' */
+
+
+/* 2. <body> elementet ska ha bakgrundsfärg #bdc3c7 */
+
+
+/* 3. Rubriken <h1> ska ha färg #9b59b6 */
+
+
+/* 4. Alla underubriker <h2> ska ha en orange färg */
+
+
+/* 5. Alla <li> element i en ul-lista ska ha blå färg (välj valfri hexadecimal färg) */
+
+
+/* 6. Alla p ska ha en gul bakgrundsfärg */
+
+
+/* 7. Alla inmatningsfält (input) ska ha en border på '3px solid red' */
+
+
+/* 8. Alla element med class 'hello' ska ha en vit bakgrund */
+
+
+/* 9. Elementet med id 'special' ska ha en border på '2px solid blue' */
+
+
+/* 10. Alla <p> och <div> ska ha färgen svart #000 */
+
+
+/* 11. Alla <p> som ligger nästlade (inuti) en div ska ha font-size: 22px */
+
+
+/* 12. Ge alla em i den fjärde section-en med class="fourth" en 'text-decoration: underline;' */
+
+
+/* 13. Gör så att <h1> elementet får färgen blå när musen är över elementet (:hover) */
+
+
+/* 14. Gör så att alla besökta <a> element får färgen grå (:visited) */
+
+
+/* 15. Alla inmatningsfält (input) av typ 'text' ska ha grå bakgrund */
+
+
+/* 16. Alla checkboxrutor som är 'checked' ska får en vänstermarginal på 50px (margin-left: 50px) */
+
+
+/* 17. Alla section som innehåller ett h2 ska få en grön ram */
+
+
+/* 18. Använd :is för att välja alla <h1>, <h2>, och <h3> element och sätt en rosa bakgrundsfärg */
+
+
+/* 19. Använd :where för att ge alla <p> element utan extra vikt en färg */
