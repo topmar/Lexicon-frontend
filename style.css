@@ -1,56 +1,95 @@
 
 /* 1. Ge alla element på sidan en 'box-sizing: border-box;' */
-
+* {
+    box-sizing: border-box;
+}
 
 /* 2. <body> elementet ska ha bakgrundsfärg #bdc3c7 */
-
+body {
+    background-color: #bdc3c7;
+}
 
 /* 3. Rubriken <h1> ska ha färg #9b59b6 */
-
+h1 {
+    color: #9b59b6;
+}
 
 /* 4. Alla underubriker <h2> ska ha en orange färg */
-
+h2 {
+    color: orange;
+}
 
 /* 5. Alla <li> element i en ul-lista ska ha blå färg (välj valfri hexadecimal färg) */
-
+li {
+    color: #6E6EEE;
+}
 
 /* 6. Alla p ska ha en gul bakgrundsfärg */
-
+p {
+    background-color: yellow;
+}
 
 /* 7. Alla inmatningsfält (input) ska ha en border på '3px solid red' */
-
+input {
+    border: 3px solid red;
+}
 
 /* 8. Alla element med class 'hello' ska ha en vit bakgrund */
-
+.hello {
+    background-color: white;
+}
 
 /* 9. Elementet med id 'special' ska ha en border på '2px solid blue' */
-
+#special {
+    border: 2px solid blue;
+}
 
 /* 10. Alla <p> och <div> ska ha färgen svart #000 */
-
+p, div {
+    color: #000;
+}
 
 /* 11. Alla <p> som ligger nästlade (inuti) en div ska ha font-size: 22px */
-
+div p {
+    font-size: 22px;
+}
 
 /* 12. Ge alla em i den fjärde section-en med class="fourth" en 'text-decoration: underline;' */
-
+.fourth em {
+    text-decoration: underline;
+}
 
 /* 13. Gör så att <h1> elementet får färgen blå när musen är över elementet (:hover) */
-
+h1:hover {
+    color: blue;
+}
 
 /* 14. Gör så att alla besökta <a> element får färgen grå (:visited) */
-
+a:visited {
+    color: gray;
+}
 
 /* 15. Alla inmatningsfält (input) av typ 'text' ska ha grå bakgrund */
-
+input[type="text"] {
+    background-color: gray;
+}
 
 /* 16. Alla checkboxrutor som är 'checked' ska får en vänstermarginal på 50px (margin-left: 50px) */
-
+input[type="checkbox"] {
+    margin-left: 50px;
+}
 
 /* 17. Alla section som innehåller ett h2 ska få en grön ram */
-
+section:has(h2) {
+    border: 2px solid green;
+}
 
 /* 18. Använd :is för att välja alla <h1>, <h2>, och <h3> element och sätt en rosa bakgrundsfärg */
-
+:is(h1, h2, h3) {
+    background-color: pink;
+}
 
 /* 19. Använd :where för att ge alla <p> element utan extra vikt en färg */
+p:where(:not([style*="font-weight: bold"]):not(:has(b))) {
+    color: skyblue;
+}
