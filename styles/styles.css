@@ -1,0 +1,82 @@
+@import url(reset.css);
+
+:root {
+  --page-background-color: #e5e5e5;
+  --secondary-color: #f8f8f8; /* nav footer */
+  --content-color: #587291; /* content background */
+  --button-color: #5b2e48; /* button background */
+  /* --button-color-rgb: rgb(91, 46, 72); */
+
+  background-color: var(--page-background-color);
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+ul[role="list"] {
+  list-style: none;
+}
+.container {
+  max-width: 1451px;
+  margin: 0 auto;
+}
+header {
+  background-image: url(/images/img.jpg);
+  height: 97vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+nav a, footer a {
+  color: #000;
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  top: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 1384px;
+  width: 90%;
+  background-color: var(--secondary-color);
+  padding: 1.75rem 0;
+  box-shadow: 0 0 20px var(--secondary-color);
+}
+nav ul, footer ul {
+  display: flex;
+}
+nav ul {
+  font-size: 1.5rem;
+  gap: 6.3rem;
+  justify-content: center;
+}
+footer ul {
+  font-size: 1.87rem;
+  gap: 1.4rem;
+  justify-content: right;
+}
+footer ul:last-child {
+  margin-right: 5.5rem;
+}
+footer {
+  padding: 4rem 0;
+}
+
+main {
+  background-color: var(--content-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 2.5rem;
+}
+h1 {
+  font-size: 2.2rem;
+}
+button {
+  font-size: 1.87rem;
+  border: 0;
+  background-color: var(--button-color);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(91, 46, 72, 0.6);
+}
