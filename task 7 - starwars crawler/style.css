@@ -1,0 +1,92 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFE81F;
+  background-image: url('./images/stars.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  perspective: 200px;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1600px;
+  visibility: hidden;
+  animation: showAndShrink 10s ease forwards;
+  animation-delay: 5s;
+}
+.pre {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66rem;
+  font-size: 5rem;
+  color: white;
+  animation: hideText 5s ease-in forwards;
+}
+h1 { font-size: 4rem; margin: 0; }
+.episode { text-align: center; }
+p {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.5;
+  font-size: 2rem;
+  width: 39rem;
+  text-align: left;
+}
+aside, img {
+  position: absolute;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 37rem;
+  margin: 0 auto;
+  transform: rotateX(30deg) translateY(800px);
+  animation: rotateVertical 60s ease infinite;
+  animation-delay: 8s;
+}
+@keyframes hideText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showAndShrink {
+  0% {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  10% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes rotateVertical {
+  0% {
+    transform: rotateX(30deg) translateY(800px);
+  }
+  100% {
+    transform: rotateX(30deg) translateY(-2000px);
+  }
+}

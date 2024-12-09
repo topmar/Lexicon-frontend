@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  perspective: 500px;
+  overflow: hidden;
+}
+article {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transform-style: preserve-3d;
+  animation: flipCard 4s infinite;
+  transform-origin: center;
+}
+article aside {
+  position: absolute;
+  width: 220px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-origin: bottom;
+}
+
+.side-1 {
+  background-color: rgb(255, 94, 0);
+  z-index: 1;
+}
+.side-2 {
+  background-color: rgb(0, 153, 255);
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+
+@keyframes flipCard {
+  0% {
+    transform: translateY(50px);
+  }
+  30% {
+    transform: rotateX(0deg);
+  }
+  70% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}

@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #f0f0f0;
   perspective: 500px;
+  overflow: hidden;
 }
 article {
   position: relative;
