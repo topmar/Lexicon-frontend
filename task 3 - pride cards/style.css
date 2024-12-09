@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+.deck {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  transform-origin: bottom center;
+  transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease;
+}
+
+body:hover .card:nth-child(1) { transform: rotate(-20deg) translate(-100px, -20px); }
+body:hover .card:nth-child(2) { transform: rotate(-15deg) translate(-80px, -20px); }
+body:hover .card:nth-child(3) { transform: rotate(-10deg) translate(-60px, -10px); }
+body:hover .card:nth-child(4) { transform: rotate(-5deg) translate(-40px, -10px); }
+body:hover .card:nth-child(6) { transform: rotate(5deg) translate(40px, -10px); }
+body:hover .card:nth-child(7) { transform: rotate(10deg) translate(60px, -10px); }
+body:hover .card:nth-child(8) { transform: rotate(15deg) translate(80px, -20px); }
+body:hover .card:nth-child(9) { transform: rotate(20deg) translate(100px, -20px); }
+
+.card1 { background-color: pink; z-index: 9; }
+.card2 { background-color: violet; z-index: 8; }
+.card3 { background-color: blueviolet; z-index: 7; }
+.card4 { background-color: skyblue; z-index: 6; }
+.card5 { background-color: green; z-index: 5; }
+.card6 { background-color: rgb(0, 214, 0); z-index: 4; }
+.card7 { background-color: yellow; z-index: 3; }
+.card8 { background-color: orange; z-index: 2; }
+.card9 { background-color: red; z-index: 1; }
