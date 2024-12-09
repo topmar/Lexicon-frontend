@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: lightblue;
+}
+.square {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+}
+.cube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation: moveCorners 10s infinite;
+}
+@keyframes moveCorners {
+  0% { top: 0; left: 0; background-color: yellow; }
+  10% { top: 0; left: 0; background-color: red; }
+  25% {top: 0; left: 450px; background-color: red; }
+  35% { top: 0; left: 450px; background-color: blue; }
+  50% { top: 450px; left: 450px; background-color: blue; }
+  60% { top: 450px; left: 450px; background-color: green; }
+  75% { top: 450px; left: 0; background-color: green; }
+  85% { top: 450px; left: 0; background-color: yellow; }
+  100% { top: 0; left: 0; background-color: yellow; }
+}
