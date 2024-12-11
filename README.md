@@ -1,5 +1,5 @@
 # Lexicon - Front-end course 2024/25
-
+[![wakatime](https://wakatime.com/badge/user/481c0a47-380b-4cfd-a181-572d00a8c271/project/9ce6b4e6-3c6f-46e0-8b6e-270223a678b1.svg)](https://wakatime.com/badge/user/481c0a47-380b-4cfd-a181-572d00a8c271/project/9ce6b4e6-3c6f-46e0-8b6e-270223a678b1)
 This repository is intended for storing exercises completed as part of the course.
 ## List of the exercises:
 1. [10.12.2024 - Animations bootcamp](https://github.com/topmar/Lexicon-frontend/tree/v49-animation-bootcamp)
