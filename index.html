@@ -1,11 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    k
     <title>Poster Shop Checkout</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header flex-flow-column">
+      <h1>Poster Shop</h1>
+      <svg width="241" height="152" viewBox="0 0 241 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_4:17)">
+          <path d="M217.05 311.01H61.74C58.527 311.08 55.4094 309.916 53.0298 307.755C50.6502 305.595 49.19 302.605 48.95 299.4L37.95 81.96C35.69 37.35 73.1 0.0099926 120.04 0.0099926H158.83C205.78 0.0099926 243.18 37.35 240.92 81.96L229.83 299.4C229.52 305.9 223.89 311.01 217.05 311.01Z" fill="#E0A990"/>
+          <g opacity="0.2">
+            <path opacity="0.2" d="M136.83 147.01C136.46 150.18 135.98 153.33 135.41 156.46C134.84 159.59 134.25 162.71 133.57 165.81C132.89 168.91 132.17 172 131.45 175.09C130.73 178.18 129.91 181.25 129.05 184.3L127.83 182.75C129.33 182.75 130.83 182.85 132.33 182.92C133.83 182.99 135.33 183.07 136.83 183.18C139.83 183.37 142.83 183.62 145.83 184.01C142.83 184.39 139.83 184.64 136.83 184.83C135.33 184.94 133.83 185.02 132.33 185.09C130.83 185.16 129.33 185.23 127.83 185.26H126.28L126.61 183.68C127.24 180.57 127.98 177.48 128.7 174.39C129.42 171.3 130.22 168.23 131.08 165.17C131.94 162.11 132.8 159.06 133.74 156.02C134.68 152.98 135.69 149.99 136.83 147.01Z" fill="black"/>
+          </g>
+          <path d="M108.739 143.885C114.405 142.112 117.294 135.227 115.192 128.507C113.09 121.786 106.792 117.775 101.126 119.548C95.4596 121.32 92.5703 128.205 94.6725 134.926C96.7748 141.646 103.072 145.657 108.739 143.885Z" fill="#F2F2F2"/>
+          <path d="M106.484 142.263C109.817 142.125 112.387 138.807 112.224 134.85C112.061 130.893 109.226 127.797 105.893 127.935C102.56 128.072 99.9907 131.391 100.154 135.347C100.317 139.304 103.151 142.4 106.484 142.263Z" fill="#3A4851"/>
+          <path opacity="0.3" d="M108.44 133.35C110.113 133.35 111.47 131.993 111.47 130.32C111.47 128.647 110.113 127.29 108.44 127.29C106.767 127.29 105.41 128.647 105.41 130.32C105.41 131.993 106.767 133.35 108.44 133.35Z" fill="white"/>
+          <path d="M181.881 135.55C183.983 128.829 181.094 121.944 175.428 120.172C169.761 118.399 163.464 122.41 161.361 129.131C159.259 135.851 162.148 142.736 167.815 144.509C173.481 146.281 179.779 142.27 181.881 135.55Z" fill="#F2F2F2"/>
+          <path d="M176.38 135.979C176.543 132.022 173.973 128.704 170.64 128.566C167.307 128.429 164.473 131.525 164.31 135.481C164.147 139.438 166.717 142.757 170.05 142.894C173.383 143.031 176.217 139.935 176.38 135.979Z" fill="#3A4851"/>
+          <path opacity="0.3" d="M168.15 134.03C169.823 134.03 171.18 132.673 171.18 131C171.18 129.327 169.823 127.97 168.15 127.97C166.477 127.97 165.12 129.327 165.12 131C165.12 132.673 166.477 134.03 168.15 134.03Z" fill="white"/>
+          <path d="M160.17 112.4C161.58 111.73 162.83 111.24 164.17 110.75C165.51 110.26 166.84 109.84 168.17 109.47C170.878 108.711 173.649 108.199 176.45 107.94C179.238 107.68 182.048 107.808 184.8 108.32C186.165 108.606 187.503 109.007 188.8 109.52C190.052 110.069 191.248 110.739 192.37 111.52C191.155 110.955 189.885 110.516 188.58 110.21C187.294 109.935 185.985 109.778 184.67 109.74C182.063 109.711 179.464 110.047 176.95 110.74C174.448 111.419 172.014 112.33 169.68 113.46C168.51 114.01 167.36 114.62 166.25 115.26C165.14 115.9 164 116.6 163.07 117.26L160.17 112.4Z" fill="#5B3B24"/>
+          <path d="M116.75 117.96C115.83 117.29 114.67 116.57 113.58 115.96C112.49 115.35 111.31 114.72 110.15 114.16C107.813 113.03 105.376 112.119 102.87 111.44C100.36 110.747 97.7641 110.411 95.16 110.44C93.8424 110.479 92.5308 110.633 91.24 110.9C89.9397 111.21 88.6735 111.649 87.46 112.21C88.5771 111.421 89.7736 110.751 91.03 110.21C92.323 109.686 93.6622 109.284 95.03 109.01C97.7852 108.493 100.599 108.365 103.39 108.63C106.188 108.881 108.956 109.39 111.66 110.15C113.01 110.52 114.36 110.95 115.66 111.43C117.021 111.915 118.356 112.469 119.66 113.09L116.75 117.96Z" fill="#5B3B24"/>
+          <path d="M240.94 76.11C240.773 69.7892 239.802 63.5154 238.05 57.44C228.52 24.44 196.78 -1.90735e-06 158.79 -1.90735e-06H120.01C82.01 -1.90735e-06 50.28 24.47 40.75 57.44C38.9879 63.5141 38.0067 69.7879 37.83 76.11C37.7833 78.0367 37.8067 79.9867 37.9 81.96L48.9 299.4C49.23 305.9 54.9 311 61.7 311H217C223.84 311 229.47 305.9 229.8 299.4L240.8 81.96C240.947 79.9933 240.993 78.0433 240.94 76.11ZM210.09 126.91C208.47 134.85 201.97 141.33 193.24 143.68L147.36 156.01C142.728 157.25 137.852 157.25 133.22 156.01L87.35 143.68C78.62 141.33 72.12 134.85 70.5 126.91C70.2431 125.653 70.1125 124.373 70.11 123.09C70.11 112.74 78.59 103.59 90.54 101.88L130.83 96.12C137.131 95.2162 143.529 95.2162 149.83 96.12L190.11 101.88C203.46 103.8 212.49 115.08 210.09 126.91Z" fill="#202123"/>
+          <path d="M240.94 76.11H37.83C37.9969 69.7892 38.9681 63.5154 40.72 57.44H238.02C239.782 63.5141 240.763 69.7879 240.94 76.11Z" fill="#DD3C57"/>
+          <path d="M43.28 66.71C41.4896 67.0096 39.6747 67.1369 37.86 67.09C36.5339 67.0853 35.223 67.3721 34.02 67.93C20.47 74.01 18.34 111.78 18.34 111.78V302.44H0C0 302.44 9.34 149.44 8 111.78C6.94 81.78 25.77 67.2 33.47 62.53C34.501 61.8838 35.5696 61.2994 36.67 60.78C38.8328 61.5332 40.9355 62.4492 42.96 63.52L43.28 66.71Z" fill="#DD3C57"/>
+          <path d="M42.83 62.07C40.22 66.32 38.38 72.13 37.09 78.01C35.4243 86.0577 34.421 94.2284 34.09 102.44V293.11H15.75C15.75 293.11 25.08 140.11 23.75 102.44C23.2 86.76 28.07 75.3 33.95 67.26C36.4039 63.9151 39.236 60.8648 42.39 58.17C42.3956 58.2432 42.3956 58.3168 42.39 58.39L42.83 62.07Z" fill="#DD3C57"/>
+          <path d="M41.91 77.58L37.54 78.03C37.384 78.05 37.226 78.05 37.07 78.03C36.4979 77.9795 35.9613 77.7312 35.5525 77.3279C35.1437 76.9245 34.8882 76.3913 34.83 75.82L34.02 67.95L33.95 67.28L33.47 62.55L33.14 59.36C33.0757 58.708 33.272 58.057 33.6861 57.5492C34.1002 57.0415 34.6983 56.7182 35.35 56.65L39.72 56.2C40.3345 56.1393 40.9494 56.311 41.4436 56.6811C41.9379 57.0513 42.2755 57.5932 42.39 58.2C42.3956 58.2732 42.3956 58.3468 42.39 58.42L42.77 62.1L42.92 63.55L43.24 66.74L44.07 74.88C44.1323 75.5227 43.9415 76.1643 43.5381 76.6685C43.1348 77.1727 42.5507 77.4997 41.91 77.58V77.58Z" fill="#C93957"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_4:17">
+            <rect width="241" height="152" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </header>
+    <main class="flex-flow-row container">
+       <article class="card width-30 small-card-flow">
+        <img src="/assets/char-1.png" alt="austronaut"/>
+        <header>
+          <h2>Austronaut</h2>
+        </header>
+        <section>
+          <p>Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-2.png" alt="ninja"/>
+        <header>
+          <h2>Ninja</h2>
+        </header>
+        <section>
+          <p>Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercat squid skateboard readymade.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-3.png" alt="nerd"/>
+        <header>
+          <h2>Nerd</h2>
+        </header>
+         <section>
+          <p>Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-11.png" alt="läkare"/>
+        <header>
+          <h2>Läkare</h2>
+        </header>
+        <section>
+          <p>Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-12.png" alt="gitarrrknäppare"/>
+        <header>
+          <h2>Gitarrrknäppare</h2>
+        </header>
+        <section>
+          <p>Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-4.png" alt="snorklare"/>
+        <header>
+          <h2>Snorklare</h2>
+        </header>
+        <section>
+          <p>Man braid hammock listicle retro crucifix, tumeric poutine kale chips letterpress woke. Activated charcoal jianbing coloring book direct trade tote.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-5.png" alt="clown"/>
+        <header>
+          <h2>Clown</h2>
+        </header>
+        <section>
+          <p>Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-6.png" alt="polis"/>
+        <header>
+          <h2>Polis</h2>
+        </header>
+        <section>
+          <p>Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="card width-30 small-card-flow">
+        <img src="/assets/char-8.png" alt="fe"/>
+        <header>
+          <h2>Fe</h2>
+        </header>
+        <section>
+          <p>Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="small-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="big-card-flow width-45 bg-primary-1000 text-primary-130">
+        <img src="/assets/char-7.png" alt="fotograf"/>
+        <header>
+          <h2>Fotograf</h2>
+        </header>
+        <section>
+          <p>Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="big-card">Oh, take my money!</button>
+        </footer>
+      </article>
+      <article class="big-card-flow width-45 bg-primary-1000 text-primary-130">
+        <img src="/assets/char-9.png" alt="personlig tränare"/>
+        <header>
+          <h2>Personlig tränare</h2>
+        </header>
+        <section>
+          <p>Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr.</p>
+        </section>
+        <footer>
+          <button class="button" data-type="big-card">Oh, take my money!</button>
+        </footer>
+      </article>
+    </main>
+    <footer class="footer margin-top-8">
+      <div class="container flex-flow-row">
+      <section>
+        <h2>Nav</h2>
+        <nav>
+          <ul role="list">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <h2>Address</h2>
+        <address>
+          <p>Plinkeplonkvägen 32</p>
+          <p>888 81 Klonkberga</p>
+        </address>
+      </section>
+      <section>
+        <h2>Social media</h2>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31 6.84376C29.8747 7.33273 28.684 7.65487 27.4656 7.80001C28.746 7.05025 29.7089 5.85911 30.1737 4.45001C28.9632 5.15788 27.641 5.65455 26.2637 5.91876C25.6838 5.31097 24.9863 4.82745 24.2137 4.4976C23.4411 4.16775 22.6095 3.99846 21.7694 4.00001C18.3681 4.00001 15.6156 6.71251 15.6156 10.0563C15.6132 10.5214 15.6665 10.9851 15.7744 11.4375C13.3354 11.3232 10.9472 10.701 8.76249 9.6108C6.57777 8.52059 4.64468 6.98636 3.08687 5.10626C2.54036 6.02759 2.25133 7.07879 2.25 8.15001C2.25 10.25 3.34562 12.1063 5 13.1938C4.01983 13.1705 3.05974 12.9111 2.20125 12.4375V12.5125C2.20125 15.45 4.32625 17.8938 7.13875 18.45C6.60986 18.591 6.06485 18.6624 5.5175 18.6625C5.12911 18.6632 4.7416 18.6255 4.36062 18.55C5.1425 20.9563 7.41812 22.7063 10.1137 22.7563C7.92336 24.4443 5.23414 25.3567 2.46875 25.35C1.97789 25.3493 1.48748 25.3201 1 25.2625C3.81324 27.0589 7.0834 28.0091 10.4212 28C21.7562 28 27.9487 18.7688 27.9487 10.7625C27.9487 10.5 27.9419 10.2375 27.9294 9.98126C29.1313 9.1263 30.1711 8.06383 31 6.84376V6.84376Z" fill="white"/>
+        </svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M30 16.0842C30 8.35298 23.7312 2.08423 16 2.08423C8.26875 2.08423 2 8.35298 2 16.0842C2 23.0717 7.11875 28.8636 13.8125 29.9149V20.1324H10.2569V16.0842H13.8125V12.9999C13.8125 9.49173 15.9031 7.55235 19.1006 7.55235C20.6325 7.55235 22.235 7.8261 22.235 7.8261V11.2717H20.4687C18.7306 11.2717 18.1869 12.3505 18.1869 13.4592V16.0842H22.0694L21.4494 20.1324H18.1875V29.9161C24.8812 28.8655 30 23.0736 30 16.0842V16.0842Z" fill="white"/>
+        </svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.7606 2H4.3925C3.11562 2 2 2.91875 2 4.18062V27.6006C2 28.8694 3.11562 30 4.3925 30H27.7537C29.0375 30 30 28.8619 30 27.6006V4.18062C30.0075 2.91875 29.0375 2 27.7606 2ZM10.6794 25.3394H6.66812V12.8675H10.6794V25.3394ZM8.8125 10.9712H8.78375C7.5 10.9712 6.66875 10.0156 6.66875 8.81938C6.66875 7.60125 7.52187 6.66813 8.83437 6.66813C10.1469 6.66813 10.95 7.59438 10.9787 8.81938C10.9781 10.0156 10.1469 10.9712 8.8125 10.9712ZM25.3394 25.3394H21.3281V18.52C21.3281 16.8863 20.7444 15.77 19.2931 15.77C18.1844 15.77 17.5281 16.52 17.2362 17.2506C17.1269 17.5131 17.0975 17.8706 17.0975 18.2356V25.3394H13.0862V12.8675H17.0975V14.6031C17.6812 13.7719 18.5931 12.5756 20.715 12.5756C23.3481 12.5756 25.34 14.3113 25.34 18.0531L25.3394 25.3394Z" fill="white"/>
+        </svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.8331 4.33313C23.3789 4.33774 24.8601 4.95385 25.9531 6.04689C27.0461 7.13993 27.6623 8.62109 27.6669 10.1669V21.8331C27.6623 23.3789 27.0461 24.8601 25.9531 25.9531C24.8601 27.0462 23.3789 27.6623 21.8331 27.6669H10.1669C8.62109 27.6623 7.13993 27.0462 6.04689 25.9531C4.95385 24.8601 4.33774 23.3789 4.33312 21.8331V10.1669C4.33774 8.62109 4.95385 7.13993 6.04689 6.04689C7.13993 4.95385 8.62109 4.33774 10.1669 4.33313H21.8331V4.33313ZM21.8331 2H10.1669C5.675 2 2 5.675 2 10.1669V21.8331C2 26.325 5.675 30 10.1669 30H21.8331C26.325 30 30 26.325 30 21.8331V10.1669C30 5.675 26.325 2 21.8331 2V2Z" fill="white"/>
+          <path d="M23.5831 10.167C23.237 10.167 22.8986 10.0644 22.6109 9.87207C22.3231 9.67977 22.0988 9.40646 21.9663 9.08669C21.8339 8.76692 21.7992 8.41505 21.8667 8.07558C21.9342 7.73612 22.1009 7.4243 22.3457 7.17956C22.5904 6.93481 22.9022 6.76814 23.2417 6.70062C23.5812 6.63309 23.933 6.66775 24.2528 6.8002C24.5726 6.93266 24.8459 7.15696 25.0382 7.44475C25.2305 7.73253 25.3331 8.07088 25.3331 8.41699C25.3336 8.64694 25.2887 8.87473 25.2009 9.08727C25.1131 9.29982 24.9842 9.49293 24.8216 9.65553C24.659 9.81813 24.4659 9.94702 24.2534 10.0348C24.0408 10.1226 23.813 10.1675 23.5831 10.167V10.167ZM16 11.3332C16.923 11.3332 17.8253 11.607 18.5927 12.1198C19.3602 12.6326 19.9584 13.3614 20.3116 14.2142C20.6648 15.0669 20.7572 16.0053 20.5772 16.9106C20.3971 17.8159 19.9526 18.6474 19.3 19.3001C18.6473 19.9528 17.8157 20.3972 16.9104 20.5773C16.0051 20.7574 15.0668 20.665 14.214 20.3117C13.3613 19.9585 12.6324 19.3604 12.1196 18.5929C11.6068 17.8254 11.3331 16.9231 11.3331 16.0001C11.3344 14.7628 11.8265 13.5765 12.7015 12.7016C13.5764 11.8267 14.7626 11.3346 16 11.3332V11.3332ZM16 9.00012C14.6155 9.00012 13.2621 9.41066 12.111 10.1798C10.9598 10.949 10.0626 12.0423 9.53282 13.3213C9.003 14.6004 8.86438 16.0079 9.13448 17.3658C9.40457 18.7236 10.0713 19.9709 11.0502 20.9499C12.0292 21.9288 13.2765 22.5955 14.6343 22.8656C15.9922 23.1357 17.3997 22.9971 18.6788 22.4673C19.9578 21.9375 21.0511 21.0403 21.8203 19.8891C22.5894 18.738 23 17.3846 23 16.0001C23 14.1436 22.2625 12.3631 20.9497 11.0504C19.637 9.73762 17.8565 9.00012 16 9.00012V9.00012Z" fill="white"/>
+        </svg>
+      </section>
+      </div>
+    </footer>
+  </body>
 </html>
