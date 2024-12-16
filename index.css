@@ -1,7 +1,7 @@
-* { margin: 0; padding: 0; font: inherit; }
 *, *::before, *::after { box-sizing: border-box; }
-img, picture { display: block; max-width: 100%; }
-ul[role="list"], ol[role="list"] { list-style: none; }
+* { margin: 0; padding: 0; font: inherit; }
+img, picture, svg, video { display: block; max-width: 100%; }
+ul[role="list"] { list-style: none; }
 html:focus-within { scroll-behavior: smooth; }
 body { min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.4; }
 a { all: unset; cursor: pointer; color: inherit; outline: none; }
@@ -218,13 +218,3 @@ main > h2 {
   font-size: var(--fs-main-header);
   margin-bottom: -4rem;
 }
-
-141px miedzy headerem a h checkout
-
-14px miedzy naglowkiem tabeli a body
-25px miedzy wierszami
-52px miedzy wierszem a stoka
-143px miedzy tabela a buttonem
-
-143px button footer
-
