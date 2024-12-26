@@ -1,0 +1,12 @@
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; font: inherit; }
+img, picture, svg, video { display: block; max-width: 100%; }
+[role="list"] { list-style: none; margin: 0; padding: 0; }
+html:focus-within { scroll-behavior: smooth; }
+body { min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.4; }
+body > :is(header, footer), main { container-type: inline-size; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+p, li, figcaption { text-wrap: pretty; }
+a { all: unset; cursor: pointer; color: inherit; outline: none; }
+a:not([class]) { text-decoration-skip-ink: auto; }
+input, button, textarea, select { font: inherit; }

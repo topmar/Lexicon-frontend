@@ -1,0 +1,70 @@
+@import url("reset.css");
+@import url("grid.css");
+
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 87%);
+  --clr-neutral-300: hsl(0, 0%, 57%);
+  --clr-neutral-400: hsl(0, 0%, 27%);
+  --clr-neutral-800: hsl(0, 0%, 17%);
+  --clr-neutral-900: hsl(0, 0%, 12%);
+
+  --clr-green-100: hsl(169, 11%, 93%);
+  --clr-green-200: hsl(169, 51%, 58%);
+  --clr-green-400: hsl(169, 86%, 28%);
+  --clr-green-800: hsl(169, 86%, 12%);
+  --clr-green-900: hsl(169, 80%, 12%);
+
+  --clr-robust: hsl(221, 63%, 32%);
+  --clr-green: hsl(110, 63%, 32%);
+  --clr-flower: hsl(2, 92%, 33%);
+  --clr-colorful: hsl(303, 55%, 47%);
+  --clr-sunloving: hsl(27, 88%, 33%);
+  --clr-air: hsl(180, 84%, 27%);
+  --clr-decorative: hsl(278, 79%, 40%);
+  --clr-edible: hsl(68, 61%, 30%);
+  --clr-easy: hsl(224, 86%, 58%);
+  --clr-fragrant: hsl(327, 51%, 47%);
+  --clr-fast: hsl(218, 11%, 34%);
+
+  --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  --font-base: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  --fs-100: 0.625rem;
+  --fs-200: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3rem;
+
+  --clr-accent: var(--clr-green-400);
+  --clr-accent-light-1: var(--clr-green-100);
+
+  --clr-primary-light-1: var(--clr-neutral-100);
+  --clr-primary-light-2: var(--clr-neutral-200);
+  --clr-primary-light-3: var(--clr-neutral-300);
+  --clr-primary: var(--clr-neutral-400);
+  --clr-primary-dark: var(--clr-neutral-800);
+
+  --fw-regular: var(--fw-400);
+  --fw-medium: var(--fw-500);
+  --fw-semi-bold: var(--fw-600);
+  --fw-bold: var(--fw-700);
+  --fw-x-bold: var(--fw-900);
+}
+
+/* Utilities */
+
+/* Composition */
+
+/* Global/base */
