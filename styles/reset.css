@@ -7,6 +7,6 @@ body { min-height: 100vh; text-rendering: optimizeSpeed; line-height: 1.4; }
 body > :is(header, footer), main { container-type: inline-size; }
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 p, li, figcaption { text-wrap: pretty; }
-a { all: unset; cursor: pointer; color: inherit; outline: none; }
+a { all: unset; box-sizing: border-box; cursor: pointer; color: inherit; outline: none; }
 a:not([class]) { text-decoration-skip-ink: auto; }
 input, button, textarea, select { font: inherit; }

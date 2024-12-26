@@ -1,39 +1,25 @@
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 600px;
-  --breakout-max-width: 800px;
+  --content-max-width: 900px;
+  --narrow-max-width: 600px;
 
-  --breakout-size: calc(
-    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  --content-size: calc(
+    (var(--content-max-width) - var(--narrow-max-width)) / 2
   );
 
   display: grid;
   grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end]
-    minmax(0, var(--breakout-size)) [breakout-end]
-    minmax(var(--padding-inline), 1fr) [full-width-end];
+    minmax(var(--padding-inline), 1fr)
+    [content-start] minmax(0, var(--content-size))
+    [narrow-start] min(100% - (var(--padding-inline) * 2), var(--narrow-max-width)) [narrow-end]
+    minmax(0, var(--content-size)) [content-end]
+    minmax(var(--padding-inline), 1fr);
 }
 
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width) {
+.content-grid > :not(.narrow) {
   grid-column: content;
 }
 
-.content-grid > .breakout {
-  grid-column: breakout;
-}
-
-.content-grid > .full-width {
-  grid-column: full-width;
-
-  display: grid;
-  grid-template-columns: inherit;
-}
-
-img.full-width {
-  width: 100%;
-  max-height: 45vh;
-  object-fit: cover;
+.content-grid > .narrow {
+  grid-column: narrow;
 }

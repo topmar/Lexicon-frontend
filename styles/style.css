@@ -64,7 +64,60 @@
 }
 
 /* Utilities */
+.bg-color-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
 
 /* Composition */
+.primary-header__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  path {
+    stroke: var(--clr-green-400);
+    stroke-width: 7;
+  }
+  .logo-text {
+    text-transform: uppercase;
+    line-height: 1;
+    width: 13ch;
+    color: var(--clr-green-400);
+    font-weight: var(--fw-semi-bold);
+  }
+}
+.header-nav__list {
+  display: flex;
+  a {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+  }
+  a:hover {
+    background-color: var(--clr-green-400);
+    color: var(--clr-neutral-100);
+  }
+  a:focus {
+    background-color: var(--clr-green-400);
+    color: var(--clr-neutral-100);
+    border: 2px solid black ;
+  }
+}
 
 /* Global/base */
+body {
+  font-family: var(--font-base);
+  background-color: var(--clr-accent-light-1);
+  color: var(--clr-primary-dark);
+}
