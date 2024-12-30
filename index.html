@@ -18,7 +18,7 @@
           <defs>
             <filter id="filter0_d_23_425" x="-0.00012207" y="0" width="213.878" height="210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
               <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <!-- <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/> -->
               <feOffset dy="4"/>
               <feGaussianBlur stdDeviation="2"/>
               <feComposite in2="hardAlpha" operator="out"/>
@@ -39,8 +39,351 @@
         </ul>
       </nav>
     </div>
-    
   </header>
-
+  <main class="content-grid">
+    <section class="first-section__layout narrow text-center">
+      <h2>Uppskattade växter</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, corporis ipsum.</p>
+    </section>
+    <section class="gallery">
+      <div class="gallery-grid__layout bg-color-neutral-100">
+        <img class="grid-row-span-2" src="https://picsum.photos/id/239/290/500" alt="">
+        <img src="https://picsum.photos/id/102/145/250" alt="">
+        <img src="https://picsum.photos/id/248/145/250" alt="">
+        <img src="https://picsum.photos/id/152/290/250" alt="">
+        <img class="grid-col-span-2" src="https://picsum.photos/id/530/290/250" alt="">
+        <img src="https://picsum.photos/id/360/290/250" alt="">
+      </div>
+    </section>
+    <section class="newsletter-section__layout bg-color-neutral-100 full-width">
+      <div class="narrow flex align-items justify-content-center">
+        <form action="">
+          <h2>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</h2>
+          <label class="visually-hidden" for="email">email</label>
+          <div class="newsletter-form">
+            <input id="email" type="email" placeholder="email@domain.com" maxlength="28" pattern=".+@example\.com">
+            <button class="send-button" type="submit">SKICKA</button>
+          </div>
+        </form>
+        <div class="icon-box">
+          <svg aria-hidden="true" width="199" height="196" viewBox="0 0 199 196" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M112.171 18.0294L62.51 99.7912L57.9218 97.0086L107.583 15.2468L112.171 18.0294Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.9369 126.317C47.1481 126.317 49.7513 123.716 49.7513 120.507C49.7513 117.298 47.1481 114.697 43.9369 114.697C40.7257 114.697 38.1225 117.298 38.1225 120.507C38.1225 123.716 40.7257 126.317 43.9369 126.317ZM43.9369 131.68C50.1123 131.68 55.1184 126.678 55.1184 120.507C55.1184 114.336 50.1123 109.334 43.9369 109.334C37.7615 109.334 32.7554 114.336 32.7554 120.507C32.7554 126.678 37.7615 131.68 43.9369 131.68Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M66.2999 160.284C69.5111 160.284 72.1143 157.683 72.1143 154.474C72.1143 151.265 69.5111 148.664 66.2999 148.664C63.0887 148.664 60.4855 151.265 60.4855 154.474C60.4855 157.683 63.0887 160.284 66.2999 160.284ZM66.2999 165.647C72.4753 165.647 77.4814 160.645 77.4814 154.474C77.4814 148.303 72.4753 143.3 66.2999 143.3C60.1245 143.3 55.1184 148.303 55.1184 154.474C55.1184 160.645 60.1245 165.647 66.2999 165.647Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M119.555 164.118C109.214 162.035 103.003 161.938 92.7307 164.113C87.8249 165.152 84.4167 167.758 80.6985 170.601C80.3453 170.871 79.9893 171.143 79.6289 171.416C75.536 174.519 70.9522 177.657 64.0613 177.57C57.301 177.484 52.8861 174.133 48.9947 171.016C48.8154 170.873 48.6373 170.73 48.4601 170.588C44.7191 167.584 41.3999 164.919 36.456 164.134C35.5342 163.988 34.6438 163.841 33.7814 163.699C25.2602 162.292 19.469 161.335 13.0733 165.971C11.174 167.347 9.6706 169.576 8.51759 172.369C7.37142 175.146 6.63987 178.316 6.18311 181.36C5.72794 184.394 5.55571 187.234 5.49817 189.32C5.48603 189.76 5.47902 190.165 5.47551 190.531H159.891C159.759 190.4 159.625 190.267 159.487 190.131C156.921 187.602 153.287 184.189 149.011 180.649C140.371 173.496 129.444 166.11 119.555 164.118ZM165.17 192.765C166.825 191.262 166.824 191.261 166.824 191.261L166.818 191.255L166.803 191.238L166.746 191.176C166.697 191.122 166.624 191.044 166.53 190.943C166.341 190.74 166.064 190.445 165.706 190.07C164.989 189.32 163.945 188.247 162.628 186.949C159.995 184.355 156.264 180.85 151.864 177.207C143.154 169.996 131.494 161.963 120.439 159.737C109.549 157.543 102.719 157.429 91.8033 159.741C85.8589 161 81.67 164.216 78.0259 167.014C77.6539 167.3 77.2876 167.581 76.9257 167.856C72.9573 170.864 69.4139 173.168 64.1179 173.101C59.0058 173.036 55.6425 170.613 51.7922 167.529C51.5638 167.346 51.3336 167.161 51.101 166.973C47.4861 164.061 43.3101 160.697 37.1576 159.72C36.2335 159.574 35.318 159.419 34.4098 159.266C26.1121 157.865 18.4294 156.568 10.4473 162.353C7.62688 164.397 5.70815 167.454 4.38286 170.665C3.05072 173.893 2.24775 177.447 1.75995 180.698C1.27056 183.96 1.0882 186.988 1.02727 189.197C0.996749 190.303 0.996566 191.21 1.00418 191.844C1.00799 192.161 1.01375 192.41 1.01868 192.583C1.02114 192.669 1.02339 192.736 1.02508 192.783L1.02715 192.838L1.02779 192.854L1.02807 192.861C1.02807 192.861 1.02812 192.862 3.26233 192.765L1.02812 192.862L1.12062 195H170.227L166.825 191.262L165.17 192.765Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3396 95.1914L83.6076 114.155L85.9282 110.334L53.823 90.8631C53.5041 92.3815 53.0015 93.8323 52.3396 95.1914ZM45.4175 71.0809L84.6152 6.54547C85.256 5.49043 86.6314 5.15425 87.6872 5.79459L192.45 69.3318C193.506 69.9721 193.843 71.3465 193.202 72.4016L148.646 145.758C148.006 146.813 146.63 147.149 145.574 146.509L116.516 128.885L114.195 132.706L143.254 150.329C146.421 152.251 150.547 151.242 152.47 148.077L197.025 74.7204C198.948 71.5553 197.938 67.4322 194.771 65.5112L90.0078 1.97394C86.8403 0.0529221 82.7142 1.06147 80.7917 4.22659L41.3496 69.1645C42.7908 69.6415 44.1547 70.2882 45.4175 71.0809ZM105.046 121.929L97.3987 117.291L95.0781 121.112L102.725 125.749L105.046 121.929ZM119.894 64.9296C119.721 61.9135 118.61 60.4497 117.611 59.8939C116.611 59.3381 114.781 59.1674 112.125 60.6105C109.525 62.0225 106.73 64.7287 104.617 68.5252C102.503 72.3216 101.676 76.122 101.846 79.0732C102.02 82.0893 103.13 83.5531 104.13 84.1089C105.13 84.6647 106.96 84.8354 109.616 83.3923C112.215 81.9803 115.011 79.2741 117.124 75.4777C119.238 71.6812 120.064 67.8808 119.894 64.9296ZM121.033 77.6503C125.956 68.8065 125.397 59.1081 119.785 55.9883C114.172 52.8684 105.632 57.5087 100.708 66.3525C95.7848 75.1963 96.3435 84.8947 101.956 88.0145C107.568 91.1344 116.109 86.4941 121.033 77.6503Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M50.9594 74.3696C49.3065 72.9641 46.7681 71.5726 42.5428 69.5994L44.4365 65.5504C48.6393 67.5131 51.6917 69.1239 53.8579 70.9659C56.1516 72.9162 57.3961 75.071 58.1704 77.9079L58.207 78.0421L58.2267 78.1798C58.4873 80.0027 58.4382 82.7975 58.1976 85.849C57.953 88.9523 57.4957 92.4926 56.8705 95.884L52.4719 95.0743C53.0693 91.8333 53.5065 88.4462 53.7389 85.4981C53.9675 82.5979 53.9848 80.2766 53.8171 78.9457C53.2517 76.9448 52.4508 75.6378 50.9594 74.3696Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M112.171 18.0294L62.51 99.7912L57.9218 97.0086L107.583 15.2468L112.171 18.0294Z" stroke="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.9369 126.317C47.1481 126.317 49.7513 123.716 49.7513 120.507C49.7513 117.298 47.1481 114.697 43.9369 114.697C40.7257 114.697 38.1225 117.298 38.1225 120.507C38.1225 123.716 40.7257 126.317 43.9369 126.317ZM43.9369 131.68C50.1123 131.68 55.1184 126.678 55.1184 120.507C55.1184 114.336 50.1123 109.334 43.9369 109.334C37.7615 109.334 32.7554 114.336 32.7554 120.507C32.7554 126.678 37.7615 131.68 43.9369 131.68Z" stroke="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M66.2999 160.284C69.5111 160.284 72.1143 157.683 72.1143 154.474C72.1143 151.265 69.5111 148.664 66.2999 148.664C63.0887 148.664 60.4855 151.265 60.4855 154.474C60.4855 157.683 63.0887 160.284 66.2999 160.284ZM66.2999 165.647C72.4753 165.647 77.4814 160.645 77.4814 154.474C77.4814 148.303 72.4753 143.3 66.2999 143.3C60.1245 143.3 55.1184 148.303 55.1184 154.474C55.1184 160.645 60.1245 165.647 66.2999 165.647Z" stroke="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M119.555 164.118C109.214 162.035 103.003 161.938 92.7307 164.113C87.8249 165.152 84.4167 167.758 80.6985 170.601C80.3453 170.871 79.9893 171.143 79.6289 171.416C75.536 174.519 70.9522 177.657 64.0613 177.57C57.301 177.484 52.8861 174.133 48.9947 171.016C48.8154 170.873 48.6373 170.73 48.4601 170.588C44.7191 167.584 41.3999 164.919 36.456 164.134C35.5342 163.988 34.6438 163.841 33.7814 163.699C25.2602 162.292 19.469 161.335 13.0733 165.971C11.174 167.347 9.6706 169.576 8.51759 172.369C7.37142 175.146 6.63987 178.316 6.18311 181.36C5.72794 184.394 5.55571 187.234 5.49817 189.32C5.48603 189.76 5.47902 190.165 5.47551 190.531H159.891C159.759 190.4 159.625 190.267 159.487 190.131C156.921 187.602 153.287 184.189 149.011 180.649C140.371 173.496 129.444 166.11 119.555 164.118ZM165.17 192.765C166.825 191.262 166.824 191.261 166.824 191.261L166.818 191.255L166.803 191.238L166.746 191.176C166.697 191.122 166.624 191.044 166.53 190.943C166.341 190.74 166.064 190.445 165.706 190.07C164.989 189.32 163.945 188.247 162.628 186.949C159.995 184.355 156.264 180.85 151.864 177.207C143.154 169.996 131.494 161.963 120.439 159.737C109.549 157.543 102.719 157.429 91.8033 159.741C85.8589 161 81.67 164.216 78.0259 167.014C77.6539 167.3 77.2876 167.581 76.9257 167.856C72.9573 170.864 69.4139 173.168 64.1179 173.101C59.0058 173.036 55.6425 170.613 51.7922 167.529C51.5638 167.346 51.3336 167.161 51.101 166.973C47.4861 164.061 43.3101 160.697 37.1576 159.72C36.2335 159.574 35.318 159.419 34.4098 159.266C26.1121 157.865 18.4294 156.568 10.4473 162.353C7.62688 164.397 5.70815 167.454 4.38286 170.665C3.05072 173.893 2.24775 177.447 1.75995 180.698C1.27056 183.96 1.0882 186.988 1.02727 189.197C0.996749 190.303 0.996566 191.21 1.00418 191.844C1.00799 192.161 1.01375 192.41 1.01868 192.583C1.02114 192.669 1.02339 192.736 1.02508 192.783L1.02715 192.838L1.02779 192.854L1.02807 192.861C1.02807 192.861 1.02812 192.862 3.26233 192.765L1.02812 192.862L1.12062 195H170.227L166.825 191.262L165.17 192.765Z" stroke="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.3396 95.1914L83.6076 114.155L85.9282 110.334L53.823 90.8631C53.5041 92.3815 53.0015 93.8323 52.3396 95.1914ZM45.4175 71.0809L84.6152 6.54547C85.256 5.49043 86.6314 5.15425 87.6872 5.79459L192.45 69.3318C193.506 69.9721 193.843 71.3465 193.202 72.4016L148.646 145.758C148.006 146.813 146.63 147.149 145.574 146.509L116.516 128.885L114.195 132.706L143.254 150.329C146.421 152.251 150.547 151.242 152.47 148.077L197.025 74.7204C198.948 71.5553 197.938 67.4322 194.771 65.5112L90.0078 1.97394C86.8403 0.0529221 82.7142 1.06147 80.7917 4.22659L41.3496 69.1645C42.7908 69.6415 44.1547 70.2882 45.4175 71.0809ZM105.046 121.929L97.3987 117.291L95.0781 121.112L102.725 125.749L105.046 121.929ZM119.894 64.9296C119.721 61.9135 118.61 60.4497 117.611 59.8939C116.611 59.3381 114.781 59.1674 112.125 60.6105C109.525 62.0225 106.73 64.7287 104.617 68.5252C102.503 72.3216 101.676 76.122 101.846 79.0732C102.02 82.0893 103.13 83.5531 104.13 84.1089C105.13 84.6647 106.96 84.8354 109.616 83.3923C112.215 81.9803 115.011 79.2741 117.124 75.4777C119.238 71.6812 120.064 67.8808 119.894 64.9296ZM121.033 77.6503C125.956 68.8065 125.397 59.1081 119.785 55.9883C114.172 52.8684 105.632 57.5087 100.708 66.3525C95.7848 75.1963 96.3435 84.8947 101.956 88.0145C107.568 91.1344 116.109 86.4941 121.033 77.6503Z" stroke="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M50.9594 74.3696C49.3065 72.9641 46.7681 71.5726 42.5428 69.5994L44.4365 65.5504C48.6393 67.5131 51.6917 69.1239 53.8579 70.9659C56.1516 72.9162 57.3961 75.071 58.1704 77.9079L58.207 78.0421L58.2267 78.1798C58.4873 80.0027 58.4382 82.7975 58.1976 85.849C57.953 88.9523 57.4957 92.4926 56.8705 95.884L52.4719 95.0743C53.0693 91.8333 53.5065 88.4462 53.7389 85.4981C53.9675 82.5979 53.9848 80.2766 53.8171 78.9457C53.2517 76.9448 52.4508 75.6378 50.9594 74.3696Z" stroke="white"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="articles-section__layout">
+      <article class="card">
+        <img src="https://picsum.photos/id/131/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-flower">Blommor</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+        </div>
+        <header>
+          <h3>Gurka</h3>
+        </header>
+        <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.</p>
+        <footer>
+          <img class="avatar" src="/images/66.png" alt="">
+          <div class="user-data-container">
+            <h4>Coolio</h4>
+            <data>2024-04-01</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/87/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-sunloving">Solälskande</span>
+          <span class="hashtag bg-color-easy">Lättodlat</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+        </div>
+        <header>
+          <h3>Tomat</h3>
+        </header>
+        <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
+        <footer>
+          <img class="avatar" src="/images/40.png" alt="">
+          <div class="user-data-container">
+            <h4>Anna Odlare</h4>
+            <data>2024-12-05</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/23/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-decorative">Dekorativ</span>
+          <span class="hashtag bg-color-colorful">Färgstark</span>
+          <span class="hashtag bg-color-robust">Tålig</span>
+          <span class="hashtag bg-color-flower">Blommor</span>
+        </div>
+        <header>
+          <h3>Pelargon</h3>
+        </header>
+        <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
+        <footer>
+          <img class="avatar" src="/images/5.png" alt="">
+          <div class="user-data-container">
+            <h4>Blomsterkalle</h4>
+            <data>2024-12-03</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/234/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-spiced">Kryddor</span>
+          <span class="hashtag bg-color-fragrant">Doftande</span>
+          <span class="hashtag bg-color-robust">Solälskande</span>
+        </div>
+        <header>
+          <h3>Basilika</h3>
+        </header>
+        <p>En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.</p>
+        <footer>
+          <img class="avatar" src="/images/56.png" alt="">
+          <div class="user-data-container">
+            <h4>Krydd-Malin</h4>
+            <data>2024-12-07</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/24/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-fast">Snabbväxande</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+        </div>
+        <header>
+          <h3>Sallad</h3>
+        </header>
+        <p>Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.</p>
+        <footer>
+          <img class="avatar" src="/images/11.png" alt="">
+          <div class="user-data-container">
+            <h4>Grönis</h4>
+            <data>2024-12-06</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/89/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-air">Luftfuktande</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+          <span class="hashtag bg-color-decorative">Dekorativ</span>
+        </div>
+        <header>
+          <h3>Ormbunke</h3>
+        </header>
+        <p>En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
+        <footer>
+          <img class="avatar" src="/images/45.png" alt="">
+          <div class="user-data-container">
+            <h4>Naturvännen</h4>
+            <data>2024-12-08</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/232/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-flower">Blommor</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+        </div>
+        <header>
+          <h3>Gurka</h3>
+        </header>
+        <p>Gurka växer snabbt, är enkel att odla och ger mängder med gurkor, bara man är noga med vattning, omplantering, duschning och gödsling.</p>
+        <footer>
+          <img class="avatar" src="/images/66.png" alt="">
+          <div class="user-data-container">
+            <h4>Coolio</h4>
+            <data>2024-04-01</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/87/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-sunloving">Solälskande</span>
+          <span class="hashtag bg-color-easy">Lättodlat</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+        </div>
+        <header>
+          <h3>Tomat</h3>
+        </header>
+        <p>En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under sommaren.</p>
+        <footer>
+          <img class="avatar" src="/images/40.png" alt="">
+          <div class="user-data-container">
+            <h4>Anna Odlare</h4>
+            <data>2024-12-05</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/23/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-decorative">Dekorativ</span>
+          <span class="hashtag bg-color-colorful">Färgstark</span>
+          <span class="hashtag bg-color-robust">Tålig</span>
+          <span class="hashtag bg-color-flower">Blommor</span>
+        </div>
+        <header>
+          <h3>Pelargon</h3>
+        </header>
+        <p>En vacker och lättskött blomma som trivs både inne och ute under sommaren.</p>
+        <footer>
+          <img class="avatar" src="/images/5.png" alt="">
+          <div class="user-data-container">
+            <h4>Blomsterkalle</h4>
+            <data>2024-12-03</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/234/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-spiced">Kryddor</span>
+          <span class="hashtag bg-color-fragrant">Doftande</span>
+          <span class="hashtag bg-color-robust">Solälskande</span>
+        </div>
+        <header>
+          <h3>Basilika</h3>
+        </header>
+        <p>En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.</p>
+        <footer>
+          <img class="avatar" src="/images/56.png" alt="">
+          <div class="user-data-container">
+            <h4>Krydd-Malin</h4>
+            <data>2024-12-07</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/24/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-fast">Snabbväxande</span>
+          <span class="hashtag bg-color-edible">Ätbart</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+        </div>
+        <header>
+          <h3>Sallad</h3>
+        </header>
+        <p>Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska måltider.</p>
+        <footer>
+          <img class="avatar" src="/images/11.png" alt="">
+          <div class="user-data-container">
+            <h4>Grönis</h4>
+            <data>2024-12-06</data>
+          </div>
+        </footer>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/89/200/230" alt="">
+        <div>
+          <span class="hashtag bg-color-air">Luftfuktande</span>
+          <span class="hashtag bg-color-green">Grönska</span>
+          <span class="hashtag bg-color-decorative">Dekorativ</span>
+        </div>
+        <header>
+          <h3>Ormbunke</h3>
+        </header>
+        <p>En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.</p>
+        <footer>
+          <img class="avatar" src="/images/45.png" alt="">
+          <div class="user-data-container">
+            <h4>Naturvännen</h4>
+            <data>2024-12-08</data>
+          </div>
+        </footer>
+      </article>
+    </section>
+    <section class="full-width bg-color-neutral-100 past-plantings-section__layout">
+      <div class="narrow flex align-items">
+        <div class="icon-box">
+          <svg aria-hidden="true" width="155" height="209" viewBox="0 0 155 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9255 91.7396C8.05954 91.7396 4.92554 94.8736 4.92554 98.7396V115.983C4.92554 119.849 8.05953 122.983 11.9255 122.983H16.0082V148.566C16.0082 181.703 42.8711 208.566 76.0082 208.566H78.9917C112.129 208.566 138.992 181.703 138.992 148.566V122.983H142.459C146.325 122.983 149.459 119.849 149.459 115.983V98.7396C149.459 94.8736 146.325 91.7396 142.459 91.7396H11.9255ZM59.0288 122.983H45.7187L45.6258 116.983H59.0288V122.983ZM70.1115 122.983H132.992V148.566C132.992 178.389 108.815 202.566 78.9917 202.566H76.0082C46.1848 202.566 22.0082 178.389 22.0082 148.566V122.983H32.1716L32.0788 116.983H19.0082H11.9255C11.3733 116.983 10.9255 116.536 10.9255 115.983V98.7396C10.9255 98.1873 11.3733 97.7396 11.9255 97.7396H142.459C143.011 97.7396 143.459 98.1873 143.459 98.7396V115.983C143.459 116.536 143.011 116.983 142.459 116.983H135.992H70.1115V122.983Z" fill="white"/>
+            <path d="M80.5 36.248C80.5 34.5911 79.1569 33.248 77.5 33.248C75.8431 33.248 74.5 34.5911 74.5 36.248H80.5ZM80.5 92.8926V36.248H74.5V92.8926H80.5Z" fill="white"/>
+            <path d="M3 3H50.5C65.4117 3 77.5 15.0883 77.5 30V36.2479H30C15.0883 36.2479 3 24.1596 3 9.24793V3Z" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M152 19.624H104.5C89.5883 19.624 77.5 31.7123 77.5 46.624V52.872H125C139.912 52.872 152 40.7836 152 25.872V19.624Z" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h2>Våra tidigare odlingar</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor distinctio nam quaerat doloribus?
+          </p>
+          <button>Planterade plantor</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer content-grid bg-color-green-400">
+    <div class="primary-footer__layout">
+    <section>
+      <div class="logo-box">
+        <svg class="logo-svg" width="214" height="210" viewBox="0 0 214 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_d_23_425)">
+            <path d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z" stroke="white" stroke-width="8"/>
+            <path d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z" stroke="white" stroke-width="8"/>
+          </g>
+          <defs>
+            <filter id="filter0_d_23_425" x="-0.00012207" y="0" width="213.878" height="210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <!-- <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/> -->
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_23_425"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_23_425" result="shape"/>
+            </filter>
+          </defs>
+        </svg>
+        <h1 class="logo-text">Planned Planthood</h1>
+      </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?
+        </p>
+        <address>
+          <a href="tel:+46201234567" class="flex">
+            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-3-3h24v24H-3z"/><path d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z" fill="#FFF"/></g></svg>
+            Telefon: 020-1234567
+          </a>
+          <a href="mailto:info@plannedplant.com" class="flex">
+            <svg width="18" height="16" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-2-4h24v24H-2z"/><path d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z" fill="#FFF"/></g></svg>
+            info@plannedplant.com
+          </a>
+        </address>
+    </section>
+    <section>
+      <nav>
+        <ul role="list">
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Historik</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </section>
+    </div>
+  </footer>
 </body>
 </html>
