@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucket List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Min Bucket List</h1>
+  </header>
+  <main>
+    <form id="bucketForm">
+      <input type="text" id="activityName" placeholder="Vad vill du göra?" required />
+      <select id="activityCategory">
+        <option value="Resor">Resor</option>
+        <option value="Äventyr">Äventyr</option>
+        <option value="Lärande">Lärande</option>
+        <option value="Hobby">Hobby</option>
+      </select>
+      <button type="submit">Lägg till</button>
+    </form>
+    <section>
+      <table id="bucket-lists">
+        <thead>
+          <tr>
+            <th class="description">Att göra</th>
+            <th class="category">Kategori</th>
+          </tr>
+        </thead>
+        <tbody id="bucketTableBody">
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
