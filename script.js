@@ -1,29 +1,47 @@
-const STORAGE_KEY = "bucketList";
-let list = [];
+const STORAGE_KEY_LIST = "bucketList";
+const STORAGE_KEY_CATEGORIES = "categories";
+let bucketList = [];
+let categories = ["Resor", "Äventyr", "Lärande", "Hobby"];
+let sortCriteria = "description";
+let sortOrderAscending = true;
 
-function saveListToLocalStorage() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+function saveListToLocalStorage(storageKey, list) {
+  localStorage.setItem(storageKey, JSON.stringify(list));
 }
 
-function loadListFromLocalStorage() {
-  const data = localStorage.getItem(STORAGE_KEY);
-  list = data ? JSON.parse(data) : [];
+function loadListFromLocalStorage(storageKey) {
+  const data = localStorage.getItem(storageKey);
+  return list = data ? JSON.parse(data) : [];
 }
 
 function addItem(item) {
-  list.push(item);
-  saveListToLocalStorage();
+  bucketList.push(item);
+  saveListToLocalStorage(STORAGE_KEY_LIST, bucketList);
+}
+
+function editItem(index) {
+  const modal = document.getElementById("editModal");
+  const editDescriptionInput = document.getElementById("editDescription");
+  const categorySelect = document.getElementById("editCategory");
+  generateCategoryOptions("editCategory");
+
+  editDescriptionInput.value = bucketList[index].description;
+  categorySelect.value = bucketList[index].category;
+
+  modal.dataset.index = index;
+
+  modal.showModal();
 }
 
 function toggleComplete(index) {
-  list[index].completed = !list[index].completed;
-  saveListToLocalStorage();
+  bucketList[index].completed = !bucketList[index].completed;
+  saveListToLocalStorage(STORAGE_KEY_LIST, bucketList);
   renderList();
 }
 
 function removeItem(index) {
-  list.splice(index, 1);
-  saveListToLocalStorage();
+  bucketList.splice(index, 1);
+  saveListToLocalStorage(STORAGE_KEY_LIST, bucketList);
   renderList();
 }
 
@@ -33,31 +51,58 @@ function renderList() {
 
   listContainer.innerHTML = "";
 
-  list.forEach((item, index) => {
-    const listItem = document.createElement("tr");
-    listItem.className = "list-item";
-    listItem.style.textDecoration = item.completed ? "line-through" : "none";
-    listItem.style.opacity = item.completed ? "0.4" : "1";
-    listItem.innerHTML = `
-      <td class="description">${item.description}</td>
-      <td class="category">${item.category}</td>
-      <td>
-      <button class="btn-icon" onclick="toggleComplete(${index})"><i class="fas ${item.completed ? 'fa-undo' : 'fa-check'}"></i></button>
-      <button class="btn-icon" onclick="editItem(${index})"><i class="fas fa-edit"></i></button>
-      <button class="btn-icon" onclick="removeItem(${index})"><i class="fas fa-trash"></i></button>
-      </td>
-    `;
+  bucketList.forEach((item, index) => {
+    const listItem = createListItem(item, index);
     listContainer.appendChild(listItem);
   });
-  if (list.length > 0) {
-    bucketListsSection.style.display = 'block';
-  } else {
-    bucketListsSection.style.display = 'none';
-  }
+
+  toggleSectionVisibility(bucketListsSection, bucketList.length > 0);
+}
+
+function createListItem(item, index) {
+  const listItem = document.createElement("tr");
+  listItem.className = "list-item";
+  listItem.innerHTML = `
+      <td class="description ${item.completed ? "line-through" : "none"}">${item.description}</td>
+      <td class="category ${item.completed ? "line-through" : "none"}">${item.category}</td>
+      <td>
+        <button class="btn-icon" onclick="toggleComplete(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+          <i class="fas ${item.completed ? 'fa-undo' : 'fa-check'}"></i>
+        </button>
+        <button class="btn-icon" onclick="editItem(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+          <i class="fas fa-edit"></i>
+        </button>
+        <button class="btn-icon" onclick="removeItem(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+          <i class="fas fa-trash"></i>
+        </button>
+      </td>
+    `;
+  return listItem;
+}
+
+function generateCategoryOptions(elementId) {
+  const selectElement = document.getElementById(elementId);
+
+  selectElement.innerHTML = "";
+
+  categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category;
+    option.textContent = category;
+    selectElement.appendChild(option);
+  });
+}
+
+function toggleSectionVisibility(section, isVisible) {
+  section.style.display = isVisible ? "block" : "none";
 }
 
 function init() {
-  loadListFromLocalStorage();
+  bucketList = loadListFromLocalStorage(STORAGE_KEY_LIST);
+  if (localStorage.getItem(STORAGE_KEY_CATEGORIES) === null)
+    saveListToLocalStorage(STORAGE_KEY_CATEGORIES, categories);
+  categories = loadListFromLocalStorage(STORAGE_KEY_CATEGORIES);
+  generateCategoryOptions("activityCategory");
   renderList();
 }
 
@@ -76,3 +121,37 @@ form.addEventListener("submit", (event) => {
     form.reset();
   }
 });
+
+const editForm = document.getElementById('modalForm');
+editForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const modal = document.getElementById('editModal');
+  const index = modal.dataset.index;
+
+  const description = document.getElementById('editDescription').value;
+  const category = document.getElementById('editCategory').value;
+
+  bucketList[index] = { ...bucketList[index], description, category };
+
+  saveListToLocalStorage(STORAGE_KEY_LIST, bucketList);
+
+  modal.close();
+  renderList();
+});
+
+function closeModal() {
+  document.getElementById("editModal").close();
+}
+
+function sortBucketList(criteria, ascending) {
+  bucketList.sort((a, b) => {
+    const aValue = a[criteria].toLowerCase();
+    const bValue = b[criteria].toLowerCase();
+
+    if (aValue < bValue) return ascending ? -1 : 1;
+    if (aValue > bValue) return ascending ? 1 : -1;
+    return 0;
+  });
+
+  renderList();
+}

@@ -17,10 +17,6 @@
     <form id="bucketForm">
       <input type="text" id="activityName" placeholder="Vad vill du göra?" required />
       <select id="activityCategory">
-        <option value="Resor">Resor</option>
-        <option value="Äventyr">Äventyr</option>
-        <option value="Lärande">Lärande</option>
-        <option value="Hobby">Hobby</option>
       </select>
       <button type="submit">Lägg till</button>
     </form>
@@ -28,8 +24,16 @@
       <table id="bucket-lists">
         <thead>
           <tr>
-            <th class="description">Att göra</th>
-            <th class="category">Kategori</th>
+            <th class="description">
+              Att göra
+              <button class="sort" onclick="sortBucketList('description', true)"><i class="fas fa-arrow-down"></i></button>
+              <button class="sort" onclick="sortBucketList('description', false)"><i class="fas fa-arrow-up"></i></button>
+            </th>
+            <th class="category">
+              Kategori
+              <button class="sort" onclick="sortBucketList('category', true)"><i class="fas fa-arrow-down"></i></button>
+              <button class="sort" onclick="sortBucketList('category', false)"><i class="fas fa-arrow-up"></i></button>
+            </th>
           </tr>
         </thead>
         <tbody id="bucketTableBody">
@@ -37,6 +41,16 @@
       </table>
     </section>
   </main>
+  <dialog id="editModal">
+    <form id="modalForm" method="dialog">
+      <h2>Edit Item</h2>
+      <input type="text" id="editDescription" placeholder="Vad vill du göra?" required />
+      <select id="editCategory">
+      </select>
+      <button type="submit">Spara</button>
+      <button type="button" onclick="closeModal()">Close</button>
+    </form>
+  </dialog>
   <script src="script.js"></script>
 </body>
 

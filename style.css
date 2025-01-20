@@ -4,7 +4,7 @@ body {
 #bucket-lists {
   display: none;
 }
-#activityName {
+#activityName, #editDescription {
   width: 500px;
 }
 
@@ -33,9 +33,34 @@ tbody tr:nth-child(even) {
 }
 
 .category {
-  width: 100px;
+  width: 150px;
 }
 
 .btn-icon {
   width: 36px;
+}
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+button[data-state="inactive"] {
+  opacity: 0.4;
+}
+
+dialog {
+  margin-top: 10%;
+  padding-bottom: 3rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.sort {
+  font-size: 0.7rem;
+  margin: 0;
+
 }
