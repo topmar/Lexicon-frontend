@@ -66,17 +66,25 @@ function createListItem(item, index) {
       <td class="description ${item.completed ? "line-through" : "none"}">${item.description}</td>
       <td class="category ${item.completed ? "line-through" : "none"}">${item.category}</td>
       <td>
-        <button class="btn-icon" onclick="toggleComplete(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+        <button class="btn-icon toggle-btn" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
           <i class="fas ${item.completed ? 'fa-undo' : 'fa-check'}"></i>
         </button>
-        <button class="btn-icon" onclick="editItem(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+        <button class="btn-icon edit-btn" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
           <i class="fas fa-edit"></i>
         </button>
-        <button class="btn-icon" onclick="removeItem(${index})" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
+        <button class="btn-icon remove-btn" ${item.completed ? "data-state='inactive'" : "data-state='active'"}>
           <i class="fas fa-trash"></i>
         </button>
       </td>
     `;
+  const toggleButton = listItem.querySelector(".toggle-btn");
+  const editButton = listItem.querySelector(".edit-btn");
+  const removeButton = listItem.querySelector(".remove-btn");
+
+  toggleButton.addEventListener("click", () => toggleComplete(index));
+  editButton.addEventListener("click", () => editItem(index));
+  removeButton.addEventListener("click", () => removeItem(index));
+  
   return listItem;
 }
 
@@ -97,12 +105,31 @@ function toggleSectionVisibility(section, isVisible) {
   section.style.display = isVisible ? "block" : "none";
 }
 
+function handleSort(sortType) {
+  const [field, direction] = sortType.split("-");
+  const ascending = direction === "asc";
+  sortBucketList(field, ascending);
+}
+
 function init() {
   bucketList = loadListFromLocalStorage(STORAGE_KEY_LIST);
   if (localStorage.getItem(STORAGE_KEY_CATEGORIES) === null)
     saveListToLocalStorage(STORAGE_KEY_CATEGORIES, categories);
   categories = loadListFromLocalStorage(STORAGE_KEY_CATEGORIES);
   generateCategoryOptions("activityCategory");
+
+  const sortButtons = document.querySelectorAll(".sort");
+  
+  sortButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const sortType = button.getAttribute("data-sort");
+      handleSort(sortType);
+    });
+  });
+  const closeModalButton = document.getElementById("close-modal");
+  closeModalButton.addEventListener("click", () => closeModal());
+
   renderList();
 }
 

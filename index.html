@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bucket List</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -26,13 +27,17 @@
           <tr>
             <th class="description">
               Att göra
-              <button class="sort" onclick="sortBucketList('description', true)"><i class="fas fa-arrow-down"></i></button>
-              <button class="sort" onclick="sortBucketList('description', false)"><i class="fas fa-arrow-up"></i></button>
+              <!-- <button class="sort" onclick="sortBucketList('description', true)"><i class="fas fa-arrow-down"></i></button> -->
+              <!-- <button class="sort" onclick="sortBucketList('description', false)"><i class="fas fa-arrow-up"></i></button> -->
+              <button class="sort" data-sort="description-asc"><i class="fas fa-arrow-down"></i></button>
+              <button class="sort" data-sort="description-desc"><i class="fas fa-arrow-up"></i></button>
             </th>
             <th class="category">
               Kategori
-              <button class="sort" onclick="sortBucketList('category', true)"><i class="fas fa-arrow-down"></i></button>
-              <button class="sort" onclick="sortBucketList('category', false)"><i class="fas fa-arrow-up"></i></button>
+              <!-- <button class="sort" onclick="sortBucketList('category', true)"><i class="fas fa-arrow-down"></i></button> -->
+              <!-- <button class="sort" onclick="sortBucketList('category', false)"><i class="fas fa-arrow-up"></i></button> -->
+              <button class="sort" data-sort="category-asc"><i class="fas fa-arrow-down"></i></button>
+              <button class="sort" data-sort="category-desc"><i class="fas fa-arrow-up"></i></button>
             </th>
           </tr>
         </thead>
@@ -48,10 +53,9 @@
       <select id="editCategory">
       </select>
       <button type="submit">Spara</button>
-      <button type="button" onclick="closeModal()">Close</button>
+      <button type="button" id="close-modal">Close</button>
     </form>
   </dialog>
-  <script src="script.js"></script>
 </body>
 
 </html>
