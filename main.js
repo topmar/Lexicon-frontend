@@ -32,7 +32,7 @@ const renderDogs = (dogs) => {
 
     const imageLoadPromise = new Promise((resolve, reject) => {
       img.onload = () => resolve(img);
-      img.onerror = () => reject(new Error("Nie udało się załadować obrazu"));
+      img.onerror = () => reject(new Error("Image failed to load"));
     });
 
     imageLoadPromise
@@ -42,8 +42,8 @@ const renderDogs = (dogs) => {
         dogList.appendChild(card);
       })
       .catch(error => {
-        console.error("Błąd przy ładowaniu obrazu:", error);
-        alert("Nie udało się załadować zdjęcia psa.");
+        console.error("Image failed to load:", error);
+        alert("Det gick inte att ladda bilden");
       });
   });
 };
@@ -68,7 +68,7 @@ const showModal = async (dogId) => {
 
       const image = document.createElement("img");
       image.src = dogData.url;
-      image.alt = "Zdjęcie psa";
+      image.alt = "photo of a dog";
 
       const weight = document.createElement("p");
       weight.innerHTML = `<strong>Vikt:</strong> ${breed.weight?.metric || "Inga data tillgängliga"}`;
@@ -81,7 +81,7 @@ const showModal = async (dogId) => {
 
       const imageLoadPromise = new Promise((resolve, reject) => {
         image.onload = () => resolve(image);
-        image.onerror = () => reject(new Error("Nie udało się załadować obrazu"));
+        image.onerror = () => reject(new Error("Image failed to load"));
       });
 
       modal.appendChild(closeButton);
@@ -96,15 +96,15 @@ const showModal = async (dogId) => {
           modal.showModal();
         })
         .catch(error => {
-          console.error("Błąd przy ładowaniu obrazu:", error);
-          alert("Nie udało się załadować zdjęcia psa.");
+          console.error("Image failed to load", error);
+          alert("Det gick inte att ladda bilden");
         });
     });
 };
 
 const showModalSearch = (dog) => {
   const modal = document.getElementById("dialog");
-  modal.innerHTML = ""; // Resetuje zawartość modala
+  modal.innerHTML = "";
 
   const closeButton = document.createElement("button");
   closeButton.textContent = "✖";
@@ -117,7 +117,7 @@ const showModalSearch = (dog) => {
 
   const image = document.createElement("img");
   image.src = dog.url;
-  image.alt = "Zdjęcie psa";
+  image.alt = "photo of a dog";
 
   const weight = document.createElement("p");
   weight.innerHTML = `<strong>Vikt:</strong> ${dog.breeds?.[0]?.weight?.metric || "Inga data tillgängliwe"}`;
