@@ -1,0 +1,158 @@
+@import url("./css/reset.css");
+:root {
+  --container-width: 1063px;
+
+  --clr-primary-100: hsl(0, 0%, 0%);
+  --clr-primary-250: hsla(0, 0%, 100%, .2);
+  --clr-primary-700: hsl(106, 84%, 59%);
+  --clr-primary-1000: hsl(0, 0%, 100%);
+
+  --clr-button-600: hsl(351, 79%, 58%);
+  --clr-button-650: hsl(351, 79%, 65%);
+
+  --clr-table-header-200: hsla(0, 83%, 57%, 0.2);
+
+  --fs-400: 1rem;
+  --fs-header: 4rem;
+  --fs-main-header: 3rem;
+  --fs-footer-nav-header: 2.5rem;
+  --fs-card-header: 2.125rem;
+  --fs-table: 2rem;
+  --fs-table-header: 1.5rem;
+  --fs-big-card-button: .875rem;
+  --fs-small-card-button: .75rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --ff-fira-sans: 'Fira sans', sans-serif;
+  --ff-roboto: Roboto, sans-serif;
+
+  --fc-primary-130: hsl(0, 0%, 13%);
+  --fc-primary-700: hsl(0, 0%, 70%);
+  --fc-table-header-930: hsla(0, 0%, 93%, 0.8);
+  --fc-primary-950: hsl(0, 0%, 93%);
+  --fc-primary-1000: hsl(0, 0%, 100%);
+}
+body {
+  font-family: var(--ff-fira-sans);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  color: var(--clr-primary-1000);
+  background-color: var(--clr-primary-100);
+}
+h1 {
+  margin: 2rem auto 2rem;
+  font-family: var(--ff-roboto);
+  font-size: var(--fs-header);
+  font-weight: var(--fw-700);
+  color: var(--fc-primary-130);
+}
+h2 {
+  font-size: var(--fs-card-header);
+  font-weight: var(--fw-700);
+  color: var(--fc-primary-130);
+}
+.header {
+  text-align: center;
+  min-width: var(--container-width);
+  background-color: var(--clr-primary-700);
+  color: var(--fc-primary-130);
+}
+.flex-flow-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-flow-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+main {
+  width: var(--container-width);
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 2rem;
+}
+.nav-button {
+  cursor: pointer;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--clr-button-600);
+}
+.nav-button:hover {
+  background-color: var(--clr-button-650);
+}
+
+.card {
+  width: 100%;
+  height: 30rem;
+  background-color: white;
+  border-radius: .7rem;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.card footer {
+  width: 100%;
+  height: 30%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card button {
+  width: 50%;
+  height: 3rem;
+  border-radius: 1rem;
+  
+}
+
+dialog {
+  position: relative;
+  padding: 3rem;
+  margin: auto;
+  width: 500px;
+  /* height: 500px; */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+button[data-type="close-modal"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red;
+}
