@@ -4,12 +4,9 @@ export const SEARCH_DOGS = `${BASE_API_URL}/images/search?limit=10`;
 export const GET_FAVORITES = `${BASE_API_URL}/favourites`;
 export const GET_DETAILS = (id) => `${BASE_API_URL}/images/${id}`;
 
-
 export const searchDogs = (limit = 10) => {
   return `${BASE_API_URL}/images/search?limit=${limit}`;
 };
-
-
 
 // images
 // GET
@@ -54,5 +51,3 @@ export const searchDogs = (limit = 10) => {
 // votes
 // DELETE
 // votes/:vote_id
-
-

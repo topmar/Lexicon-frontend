@@ -1,7 +1,6 @@
 import API_KEY from "./api_key.js";
 import * as urls from "./api_urls.js";
 
-
 const apiRequest = async (url, method = "GET", data = null) => {
   try {
     const response = await fetch(url, {
